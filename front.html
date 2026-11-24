@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1024px;height:1024px;background:#F8F4E9;color:#16211F;font-family:Georgia,'Times New Roman',serif;overflow:hidden}
+.sans{font-family:'Helvetica Neue',Arial,sans-serif}
+.page{width:1024px;height:1024px;padding:8px 14px 6px}
+/* ---------- masthead ---------- */
+.mast{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:4px solid #0E4A4A;padding-bottom:5px}
+.mastL{flex:1}
+.paper{font-size:44px;line-height:.95;font-weight:900;letter-spacing:-1px;color:#0E4A4A}
+.paper b{color:#F0A202}
+.tagline{font-size:11.5px;letter-spacing:2.2px;font-weight:700;color:#16211F;margin-top:3px}
+.subline{font-size:9.5px;color:#5A5A52;margin-top:2px;letter-spacing:.4px}
+.dialBox{width:128px;text-align:center;flex:none}
+.dialCap{font-size:8.5px;font-weight:700;letter-spacing:1.4px;color:#0E4A4A;margin-top:1px}
+/* ---------- timeline strip ---------- */
+.timeline{display:flex;align-items:center;background:#0E4A4A;color:#F8F4E9;margin-top:5px;padding:4px 8px}
+.timeline .lab{font-size:9.5px;font-weight:900;letter-spacing:1.6px;color:#F0A202;white-space:nowrap;margin-right:9px}
+.timeline .ev{font-size:10px;white-space:nowrap;padding:0 7px;border-left:1px solid #2E6B6B}
+.timeline .ev b{color:#F0A202}
+/* ---------- hero ---------- */
+.hero{display:flex;gap:10px;border-bottom:2px solid #0E4A4A;padding:6px 0}
+.heroTxt{flex:1}
+.flag{display:inline-block;background:#B3372B;color:#fff;font-size:9.5px;font-weight:900;letter-spacing:2px;padding:2px 7px}
+.heroH{font-size:28px;line-height:1.02;font-weight:900;color:#0E4A4A;margin:4px 0 3px}
+.heroH em{color:#B3372B;font-style:normal}
+.heroSub{font-size:12px;line-height:1.32;color:#2A2A24}
+.heroFacts{font-size:10px;line-height:1.42;margin-top:4px;color:#2A2A24}
+.heroFacts b{color:#0E4A4A}
+.src{font-size:8.5px;color:#6A6A60;letter-spacing:.5px;margin-top:3px}
+.heroArt{width:296px;flex:none}
+/* ---------- leads ---------- */
+.leads{display:flex;gap:10px;border-bottom:2px solid #0E4A4A;padding:6px 0}
+.lead{flex:1;display:flex;gap:8px}
+.leadArt{width:88px;flex:none}
+.leadH{font-size:17px;line-height:1.08;font-weight:900;color:#0E4A4A}
+.leadT{font-size:10px;line-height:1.32;margin-top:3px;color:#2A2A24}
+/* ---------- numbers ---------- */
+.nums{display:flex;align-items:stretch;background:#F0A202;margin-top:6px;padding:4px 8px;gap:8px}
+.nums .lab{font-size:9.5px;font-weight:900;letter-spacing:1.4px;color:#0E4A4A;align-self:center;white-space:nowrap}
+.num{flex:1;text-align:center;border-left:2px solid #0E4A4A;padding-left:6px}
+.num b{font-size:20px;color:#0E4A4A;display:block;line-height:1}
+.num span{font-size:8.5px;color:#3A2E00;letter-spacing:.4px}
+/* ---------- picture grid ---------- */
+.secH{font-size:10.5px;font-weight:900;letter-spacing:2px;color:#F8F4E9;background:#0E4A4A;display:inline-block;padding:2px 8px;margin-top:4px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5px 9px;margin-top:5px}
+.cell{display:flex;gap:6px;border-top:1px solid #C9C2AE;padding-top:3px}
+.cellArt{width:42px;height:42px;flex:none}
+.cellH{font-size:11.5px;line-height:1.12;font-weight:900;color:#16211F}
+.cellT{font-size:8.5px;line-height:1.28;color:#3A3A32;margin-top:1px}
+.cellTag{font-size:7.5px;letter-spacing:.8px;color:#B3372B;font-weight:700;margin-top:1px}
+/* ---------- map ---------- */
+.mapRow{display:flex;gap:10px;margin-top:4px;border-top:2px solid #0E4A4A;padding-top:5px}
+.mapBox{flex:1}
+.mapKey{width:300px;flex:none}
+.mapKey h4{font-size:10.5px;letter-spacing:2px;color:#0E4A4A}
+.mapKey ol{font-size:9px;line-height:1.35;margin:2px 0 0 16px;color:#2A2A24}
+.mapKey ol b{color:#0E4A4A}
+/* ---------- briefs ---------- */
+.briefs{columns:3;column-gap:14px;margin-top:4px;border-top:2px solid #0E4A4A;padding-top:4px}
+.briefs p{font-size:9px;line-height:1.2;margin-bottom:1px;color:#2A2A24;break-inside:avoid}
+.briefs p b{color:#0E4A4A}
+/* ---------- footer ---------- */
+.foot{border-top:3px solid #0E4A4A;margin-top:4px;padding-top:3px;font-size:8px;line-height:1.25;color:#4A4A42}
+.foot b{color:#B3372B}
+</style></head><body><div class="page">
+
+<!-- MASTHEAD -->
+<div class="mast">
+  <div class="mastL">
+    <div class="paper">THE <b>24</b>TH</div>
+    <div class="tagline">TUESDAY 24 NOVEMBER 2026 &nbsp;•&nbsp; THE WORLD IN ONE PICTURE</div>
+    <div class="subline">Every story below happened, or was first reported, on Tuesday 24 November 2026 — in any time zone. Nothing from another day.</div>
+  </div>
+  <div class="dialBox">
+    <svg width="100" height="100" viewBox="0 0 120 120">
+      <circle cx="60" cy="60" r="57" fill="#0E4A4A"/>
+      <circle cx="60" cy="60" r="50" fill="#F8F4E9"/>
+      <g font-family="Georgia,serif" font-size="8" font-weight="bold" fill="#0E4A4A" text-anchor="middle">
+        <text x="60" y="18">0</text><text x="102" y="63">6</text><text x="60" y="108">12</text><text x="18" y="63">18</text>
+      </g>
+      <g stroke="#0E4A4A" stroke-width="1">
+        <line x1="60" y1="10" x2="60" y2="16"/><line x1="60" y1="104" x2="60" y2="110"/>
+        <line x1="10" y1="60" x2="16" y2="60"/><line x1="104" y1="60" x2="110" y2="60"/>
+      </g>
+      <g font-family="Arial,sans-serif" font-size="7" font-weight="bold">
+        <circle cx="62.4" cy="11.5" r="4.5" fill="#B3372B"/><text x="62" y="14" fill="#fff" text-anchor="middle">1</text>
+        <circle cx="65.5" cy="12.2" r="4.5" fill="#B3372B"/><text x="65" y="15" fill="#fff" text-anchor="middle">2</text>
+        <circle cx="71.5" cy="14.5" r="4.5" fill="#F0A202"/><text x="71" y="17" fill="#0E4A4A" text-anchor="middle">3</text>
+        <circle cx="86" cy="26" r="4.5" fill="#0E4A4A"/><text x="86" y="29" fill="#fff" text-anchor="middle">4</text>
+        <circle cx="97" cy="74" r="4.5" fill="#0E4A4A"/><text x="97" y="77" fill="#fff" text-anchor="middle">5</text>
+        <circle cx="60" cy="97" r="4.5" fill="#F0A202"/><text x="60" y="100" fill="#0E4A4A" text-anchor="middle">6</text>
+      </g>
+      <line x1="60" y1="60" x2="60" y2="16" stroke="#B3372B" stroke-width="2.5"/>
+      <line x1="60" y1="60" x2="82" y2="60" stroke="#B3372B" stroke-width="2.5"/>
+      <circle cx="60" cy="60" r="4" fill="#B3372B"/>
+      <text x="60" y="46" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#0E4A4A" text-anchor="middle">24:00 UTC</text>
+      <text x="60" y="78" font-family="Georgia,serif" font-size="8" font-style="italic" fill="#0E4A4A" text-anchor="middle">the day, on one dial</text>
+    </svg>
+    <div class="dialCap">THE DAY ON ONE DIAL — UTC</div>
+  </div>
+</div>
+
+<!-- TIMELINE -->
+<div class="timeline sans">
+  <span class="lab">THE DAY IN UTC</span>
+  <span class="ev"><b>00:30</b> Zelensky: talks, now</span>
+  <span class="ev"><b>00:52</b> US blacklists Megaspeed</span>
+  <span class="ev"><b>02:37</b> China: spy death sentence</span>
+  <span class="ev"><b>07:28</b> Bloomberg: board bypassed managers</span>
+  <span class="ev"><b>DAY</b> S. Africa votes</span>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="heroTxt">
+    <span class="flag sans">TOP STORY — DAY TWO</span>
+    <div class="heroH">HUANG'S <em>SECOND ACT</em><br>SHOCKS SILICON VALLEY</div>
+    <div class="heroSub">Nvidia's board brought its founder back without telling its own managers — and Donald Trump phoned into the meeting. Shares soared as much as <b>37%</b> in a day, the biggest jump since 2000.</div>
+    <div class="heroFacts sans">▸ The reinstatement was decided Sunday, announced Monday — but the <b>how</b> only emerged today: interim chief Colette Kress and top executives learned of it last-minute.<br>▸ Washington blacklisted <b>Megaspeed</b>, the Singapore firm at the centre of the Nvidia spy scandal, from US technology.<br>▸ The board now says the return poses no national-security risk; its own investigation is still running.</div>
+    <div class="src sans">SOURCES: BLOOMBERG, 24 NOV 07:28 UTC • AP • US BUREAU OF INDUSTRY AND SECURITY</div>
+  </div>
+  <div class="heroArt">
+    <svg width="296" height="172" viewBox="0 0 296 172">
+      <rect width="296" height="172" fill="#0E4A4A"/>
+      <rect x="14" y="12" width="110" height="110" rx="8" fill="#F0A202"/>
+      <rect x="32" y="30" width="74" height="74" rx="4" fill="#16211F"/>
+      <text x="69" y="64" font-family="Georgia,serif" font-size="24" font-weight="bold" fill="#F0A202" text-anchor="middle">NVDA</text>
+      <text x="69" y="88" font-family="Arial,sans-serif" font-size="9" fill="#F8F4E9" text-anchor="middle">AI INSIDE</text>
+      <g stroke="#F0A202" stroke-width="4"><line x1="14" y1="36" x2="2" y2="36"/><line x1="14" y1="67" x2="2" y2="67"/><line x1="14" y1="98" x2="2" y2="98"/><line x1="124" y1="36" x2="136" y2="36"/><line x1="124" y1="67" x2="136" y2="67"/><line x1="124" y1="98" x2="136" y2="98"/></g>
+      <text x="150" y="30" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#F8F4E9">BEST DAY SINCE 2000</text>
+      <polyline points="150,128 185,100 205,112 242,66 272,44" fill="none" stroke="#F8F4E9" stroke-width="4"/>
+      <polygon points="272,44 256,44 272,60" fill="#F8F4E9"/>
+      <text x="150" y="162" font-family="Georgia,serif" font-size="26" font-weight="bold" fill="#F0A202">+37%</text>
+      <text x="222" y="162" font-family="Arial,sans-serif" font-size="10" fill="#F8F4E9">IN ONE DAY</text>
+    </svg>
+  </div>
+</div>
+
+<!-- LEADS -->
+<div class="leads">
+  <div class="lead">
+    <div class="leadArt">
+      <svg width="88" height="88" viewBox="0 0 104 104">
+        <rect width="104" height="104" fill="#F0A202"/>
+        <circle cx="52" cy="46" r="26" fill="#F8F4E9"/>
+        <path d="M30 46 Q52 22 74 46 Q52 58 30 46" fill="#0E4A4A"/>
+        <path d="M40 52 L52 40 L64 52" fill="none" stroke="#0E4A4A" stroke-width="3"/>
+        <text x="52" y="92" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#0E4A4A" text-anchor="middle">KYIV • TALKS</text>
+      </svg>
+    </div>
+    <div>
+      <div class="leadH">ZELENSKY: FOUR-WAY TALKS, NOW</div>
+      <div class="leadT">Ukraine's president calls for Kyiv, Moscow, Washington and Europe to meet as soon as possible — "ready as early as Tuesday". Kyiv also says its drones hit a Russian warship at a Libyan naval base, and leaked data put Russia's war dead near <b>700,000</b>.</div>
+      <div class="src sans">SOURCES: AP • KYIV INDEPENDENT</div>
+    </div>
+  </div>
+  <div class="lead">
+    <div class="leadArt">
+      <svg width="88" height="88" viewBox="0 0 104 104">
+        <rect width="104" height="104" fill="#16211F"/>
+        <circle cx="52" cy="44" r="24" fill="#0E4A4A"/>
+        <circle cx="52" cy="44" r="24" fill="none" stroke="#F0A202" stroke-width="2"/>
+        <circle cx="52" cy="44" r="6" fill="#F0A202"/>
+        <ellipse cx="52" cy="44" rx="22" ry="7" fill="none" stroke="#F8F4E9" stroke-width="1.5"/>
+        <text x="52" y="92" font-family="Arial,sans-serif" font-size="9" font-weight="bold" fill="#F8F4E9" text-anchor="middle">ORBIT • NATO</text>
+      </svg>
+    </div>
+    <div>
+      <div class="leadH">NATO: WE WILL DEFEND SPACE</div>
+      <div class="leadT">The alliance vows to defend against threats in orbit after reports that Russia is preparing a <b>nuclear-armed satellite</b>, possibly launching as soon as December. Space, NATO says, is now a domain to defend like land and sea.</div>
+      <div class="src sans">SOURCE: AP</div>
+    </div>
+  </div>
+</div>
+
+<!-- NUMBERS -->
+<div class="nums sans">
+  <span class="lab">THE DAY<br>IN NUMBERS</span>
+  <div class="num"><b>+37%</b><span>NVIDIA SHARES, INTRADAY</span></div>
+  <div class="num"><b>~700,000</b><span>RUSSIAN WAR DEAD, REPORTED</span></div>
+  <div class="num"><b>293,600</b><span>KENYA JOBS IN SAUDI ARABIA</span></div>
+  <div class="num"><b>5,300+</b><span>EBOLA DEATHS, DR CONGO</span></div>
+  <div class="num"><b>1,661</b><span>GAZA DEATH TOLL</span></div>
+</div>
+
+<div class="secH sans">TWELVE PICTURES FROM THE DAY</div>
+<div class="grid">
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#B3372B"/><path d="M23 6 C28 14 34 18 34 28 A11 11 0 0 1 12 28 C12 20 18 14 23 6Z" fill="#F0A202"/><circle cx="23" cy="30" r="5" fill="#F8F4E9"/></svg><div><div class="cellH">Fire at Indonesian factory</div><div class="cellT">Major blaze, casualties and workers missing; rescue teams still searching.</div><div class="cellTag sans">ASIA • AP</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#7FB3D5"/><path d="M6 30 L26 14 L30 20 L40 12 L42 16 L30 26 L24 24 L12 34 Z" fill="#16211F"/><circle cx="38" cy="32" r="4" fill="#F0A202"/></svg><div><div class="cellH">Russian jets in Korea's defence zone</div><div class="cellT">Seoul: several aircraft flew in Tuesday; it corrects an earlier airspace claim.</div><div class="cellTag sans">ASIA • SEOUL</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#C0392B"/><rect x="8" y="8" width="30" height="30" fill="#F8F4E9"/><path d="M23 14 L27 24 L23 22 L19 24 Z" fill="#C0392B"/><text x="23" y="36" font-size="8" font-weight="bold" text-anchor="middle" fill="#16211F">F-35</text></svg><div><div class="cellH">Pentagon rebukes Canada</div><div class="cellT">Washington: Ottawa falls short as a partner — defence gaps and its F-35 review.</div><div class="cellTag sans">N. AMERICA • PENTAGON</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#0E4A4A"/><path d="M10 34 L23 12 L36 34 Z" fill="none" stroke="#F0A202" stroke-width="2.5"/><line x1="23" y1="20" x2="23" y2="30" stroke="#F8F4E9" stroke-width="2.5"/><circle cx="23" cy="33" r="1.5" fill="#F8F4E9"/></svg><div><div class="cellH">China: death sentence for spy</div><div class="cellT">An official surnamed Ma is sentenced to death for spying for a foreign country.</div><div class="cellTag sans">ASIA • BEIJING</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#2E86AB"/><circle cx="23" cy="23" r="14" fill="#7FB3D5"/><path d="M12 23 Q23 12 34 23 Q23 34 12 23Z" fill="#0E4A4A"/><text x="23" y="42" font-size="7" font-weight="bold" text-anchor="middle" fill="#F8F4E9">COP31</text></svg><div><div class="cellH">Climate talks stall in Türkiye</div><div class="cellT">COP31 deadlocked as Saudi Arabia, Russia and oil producers clash with the climate camp.</div><div class="cellTag sans">CLIMATE • TÜRKIYE</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#F0A202"/><rect x="12" y="14" width="22" height="20" rx="2" fill="#F8F4E9"/><rect x="18" y="6" width="10" height="10" fill="#16211F"/><line x1="18" y1="24" x2="28" y2="24" stroke="#B3372B" stroke-width="2.5"/></svg><div><div class="cellH">South Africa votes, ANC tested</div><div class="cellT">Service-delivery anger hangs over the governing party; police bar anti-migrant rallies.</div><div class="cellTag sans">AFRICA • JOHANNESBURG</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#16211F"/><path d="M23 8 C30 16 34 20 34 28 A11 11 0 0 1 12 28 C12 20 16 16 23 8Z" fill="#F0A202"/><line x1="14" y1="34" x2="32" y2="14" stroke="#B3372B" stroke-width="3"/></svg><div><div class="cellH">Norway: oil licences invalid</div><div class="cellT">Supreme court voids climate-disputed oil licences in a landmark ruling.</div><div class="cellTag sans">EUROPE • OSLO</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#F8F4E9"/><circle cx="23" cy="23" r="12" fill="none" stroke="#B3372B" stroke-width="3"/><line x1="23" y1="13" x2="23" y2="33" stroke="#B3372B" stroke-width="3"/><line x1="13" y1="23" x2="33" y2="23" stroke="#B3372B" stroke-width="3"/></svg><div><div class="cellH">Ebola: last patient goes home</div><div class="cellT">Kenya discharges its last Ebola patient as the DR Congo toll passes 5,300.</div><div class="cellTag sans">AFRICA • HEALTH</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#7FB3D5"/><rect x="8" y="24" width="30" height="10" rx="4" fill="#16211F"/><circle cx="15" cy="36" r="4" fill="#16211F"/><circle cx="31" cy="36" r="4" fill="#16211F"/><line x1="10" y1="12" x2="36" y2="32" stroke="#B3372B" stroke-width="3"/></svg><div><div class="cellH">Waymo quits US freeways</div><div class="cellT">Driverless taxis pulled from all American freeways after a California ban.</div><div class="cellTag sans">TECH • USA</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#0E4A4A"/><rect x="20" y="10" width="6" height="20" rx="2" fill="#F8F4E9"/><ellipse cx="23" cy="34" rx="12" ry="4" fill="#F0A202"/><path d="M23 6 C25 3 27 4 23 2" stroke="#F0A202" stroke-width="1.5" fill="none"/></svg><div><div class="cellH">Gaza toll reaches 1,661</div><div class="cellT">Nine killed in two days; an UNRWA staffer dies in a Jabalia strike.</div><div class="cellTag sans">MIDEAST • GAZA</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#F0A202"/><rect x="10" y="16" width="26" height="18" rx="2" fill="#16211F"/><rect x="18" y="10" width="10" height="8" rx="1" fill="#16211F"/><text x="23" y="29" font-size="9" font-weight="bold" text-anchor="middle" fill="#F0A202">JOBS</text></svg><div><div class="cellH">Kenya: 293,600 jobs in Saudi</div><div class="cellT">Nairobi secures the openings — but can workers count on them, ask critics.</div><div class="cellTag sans">AFRICA • NAIROBI</div></div></div>
+  <div class="cell"><svg class="cellArt" viewBox="0 0 46 46"><rect width="46" height="46" fill="#B3372B"/><path d="M8 32 L23 12 L38 32 Z" fill="#F8F4E9"/><circle cx="18" cy="28" r="3" fill="#0E4A4A"/><circle cx="28" cy="28" r="3" fill="#F0A202"/></svg><div><div class="cellH">Nepal PM in New Delhi</div><div class="cellT">Balendra Shah meets Modi for talks amid data releases and a warming tie.</div><div class="cellTag sans">ASIA • NEW DELHI</div></div></div>
+</div>
+
+<!-- MAP -->
+<div class="mapRow">
+  <div class="mapBox">
+    <svg width="660" height="76" viewBox="0 0 660 118">
+      <rect width="660" height="118" fill="#DCE8E4"/>
+      <g fill="#0E4A4A">
+        <path d="M8,26 L60,10 L120,14 L150,26 L140,44 L110,52 L96,66 L70,60 L40,52 L14,44 Z"/>
+        <path d="M118,72 L150,68 L168,84 L158,108 L138,104 L124,86 Z"/>
+        <path d="M300,18 L330,10 L350,22 L340,40 L312,42 L296,30 Z"/>
+        <path d="M310,52 L350,46 L372,60 L360,88 L330,104 L310,84 L300,66 Z"/>
+        <path d="M380,12 L480,8 L540,16 L560,34 L520,44 L470,40 L420,52 L390,44 L372,28 Z"/>
+        <path d="M520,84 L560,78 L575,92 L545,104 L520,96 Z"/>
+        <path d="M470,52 L500,48 L510,64 L490,70 L468,62 Z"/>
+      </g>
+      <g font-family="Arial,sans-serif" font-size="8" font-weight="bold" text-anchor="middle">
+        <circle cx="52" cy="46" r="7" fill="#B3372B"/><text x="52" y="49" fill="#fff">1</text>
+        <circle cx="352" cy="26" r="7" fill="#B3372B"/><text x="352" y="29" fill="#fff">2</text>
+        <circle cx="322" cy="30" r="7" fill="#B3372B"/><text x="322" y="33" fill="#fff">3</text>
+        <circle cx="512" cy="30" r="7" fill="#B3372B"/><text x="512" y="33" fill="#fff">4</text>
+        <circle cx="508" cy="62" r="7" fill="#B3372B"/><text x="508" y="65" fill="#fff">5</text>
+        <circle cx="368" cy="42" r="7" fill="#B3372B"/><text x="368" y="45" fill="#fff">6</text>
+        <circle cx="338" cy="92" r="7" fill="#B3372B"/><text x="338" y="95" fill="#fff">7</text>
+        <circle cx="322" cy="14" r="7" fill="#B3372B"/><text x="322" y="17" fill="#fff">8</text>
+      </g>
+      <text x="8" y="12" font-family="Georgia,serif" font-size="10" font-weight="bold" fill="#0E4A4A">WHERE IT HAPPENED — A SCHEMATIC MAP, NOT TO SCALE</text>
+    </svg>
+  </div>
+  <div class="mapKey sans">
+    <h4>WHERE IT HAPPENED</h4>
+    <ol>
+      <li><b>1</b> Santa Clara — Nvidia's board</li>
+      <li><b>2</b> Kyiv — four-way talks call</li>
+      <li><b>3</b> Brussels — NATO's space vow</li>
+      <li><b>4</b> Seoul — jets in defence zone</li>
+      <li><b>5</b> Jakarta — factory fire</li>
+      <li><b>6</b> Ankara — COP31 stalls</li>
+      <li><b>7</b> Johannesburg — voters test ANC</li>
+      <li><b>8</b> Oslo — oil licences voided</li>
+    </ol>
+  </div>
+</div>
+
+<!-- BRIEFS -->
+<div class="secH sans">ALSO ON TUESDAY 24 NOVEMBER — 30 MORE STORIES IN BRIEF</div>
+<div class="briefs sans">
+  <p><b>Senegal:</b> migrant boat capsizes off the coast; dozens missing.</p>
+  <p><b>Gulf of Finland:</b> Russian cargo ship catches fire after a drone incident.</p>
+  <p><b>Iran</b> warns a US naval blockade could draw countermeasures.</p>
+  <p><b>Trump</b> condemns Newsom's death-row commutations; unveils a federal death-penalty directive.</p>
+  <p><b>DR Congo:</b> Tshisekedi enacts a constitutional-reform law amid high tensions.</p>
+  <p><b>Sahel states</b> restart dialogue with the West Africa bloc.</p>
+  <p><b>Ghana</b> unveils Heritage Series banknotes honouring Nkrumah and Kofi Annan.</p>
+  <p><b>Model of the year:</b> refugee-born South Sudanese Awar Odhiang takes the title.</p>
+  <p><b>AFRIFF</b> opens in Lagos with 23 African features.</p>
+  <p><b>Tanzania:</b> opposition official charged with treason.</p>
+  <p><b>Ethiopia:</b> new Tigray mayor vows elections within six months.</p>
+  <p><b>Ceuta</b> migrant crisis stokes anger at Sánchez ahead of Spain's vote.</p>
+  <p><b>Chad:</b> drone strike kills four in a town near Sudan.</p>
+  <p><b>Nigeria</b> starts building naval ships to cut foreign dependence.</p>
+  <p><b>Madagascar's</b> prized wild pepper at risk as forests shrink.</p>
+  <p><b>Davido and Kirk Franklin</b> bridge afrobeats and gospel with 'Hope in You'.</p>
+  <p><b>Tyla, Tems and Kidjo</b> lead Africa's hopes as Grammy nominations near.</p>
+  <p><b>Cricket:</b> India–New Zealand Wellington Test ends in a draw.</p>
+  <p><b>Cricket:</b> Inglis and Carey put Australia in command of the South Africa decider.</p>
+  <p><b>New Jersey:</b> two women indicted over a faked anti-Trump slashing attack.</p>
+  <p><b>Princeton</b> neuroscientist detained by ICE at D.C. airport.</p>
+  <p><b>Seattle:</b> father and daughter detained by ICE en route to a family baptism.</p>
+  <p><b>Russia:</b> Novoshakhtinsk refinery burning after a Ukrainian drone attack.</p>
+  <p><b>Cincinnati:</b> Fiona the hippo dies after swallowing a flung hat.</p>
+  <p><b>US midterms:</b> African leaders secure milestone wins at the polls.</p>
+  <p><b>UK:</b> Burnham's EU outreach outshines Brexit hard-liners; Sunak warns on re-entry.</p>
+  <p><b>Trump</b> made up to $15m on Nvidia shares after Huang's return, FT reports.</p>
+  <p><b>France:</b> Macron pushes strategic reserves and price floors for critical metals.</p>
+  <p><b>Canada</b> designates Masar Badil a terrorist group ahead of a Toronto conference.</p>
+  <p><b>South Africa:</b> protest outside a court as police bar anti-migrant rallies.</p>
+</div>
+
+<!-- FOOTER -->
+<div class="foot sans">
+  <b>DATE CHECK — WHAT WE LEFT OUT, ON PURPOSE:</b> The Trump–Xi–Putin trilateral and the ICJ Myanmar ruling were both <b>19 November</b>, not today. Nvidia's reinstatement was announced <b>23 November</b> — only today's developments are shown. EU sanctions: <b>23 November</b>. Inter's thriller: <b>October</b>. <b>NOT YET:</b> no COP31 deal, no talks date, no Nvidia probe result. Every story above was first reported Tuesday 24 November 2026. Illustrations are original drawings for this page. — THE 24TH.
+</div>
+
+</div></body></html>
